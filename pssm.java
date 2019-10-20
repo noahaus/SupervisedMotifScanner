@@ -9,7 +9,6 @@ public class pssm {
 		//1. read in the input sequence file + the motif training set
 			//a. read in the sequence data.
 			String input_file_name = args[0];
-			//String input_file_name = "C:\\Users\\Owner\\Documents\\workspace\\PSSM\\src\\ecoK12-MG1655.fasta";
 			FileReader input_seq_reader = new FileReader(input_file_name);
 			BufferedReader input_seq_buff = new BufferedReader(input_seq_reader);
 			StringBuilder input_seq = new StringBuilder("");
@@ -33,7 +32,6 @@ public class pssm {
 				//System.out.println("INPUT SEQUENCE SIZE: "+input_seq.length());
 			//b. read in the motif training set
 			String motif_file_name = args[1];
-			//String motif_file_name = "C:\\Users\\Owner\\Documents\\workspace\\PSSM\\src\\FruR.fasta";
 			FileReader motif_seq_reader = new FileReader(motif_file_name);
 			BufferedReader motif_seq_buff = new BufferedReader(motif_seq_reader);
 			StringBuilder motif_seq = new StringBuilder("");
@@ -130,7 +128,6 @@ public class pssm {
 		//3. scan the input sequence  for motifs, their positions, and their strand (+,-)
 				//a. implement a sliding-window approach. initialize cutoff point
 				double cutoff = Double.parseDouble(args[2]);
-				//double cutoff = 0.0;
 				int window_start = 0;
 				double score = 0.0;
 				double plus_score = 0.0;
